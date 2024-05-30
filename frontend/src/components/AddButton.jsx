@@ -4,7 +4,7 @@ function AddButton() {
     const [showPopup, setShowPopup] = useState(false);
 
     const buttonClick = () => {
-        let popup = document.getElementById("project-info-popup");
+        let popup = document.getElementById("add-partner-popup");
         if (popup.style.display == "none" || popup.style.display == "") {
             popup.style.display = "block";
         }

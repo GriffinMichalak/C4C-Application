@@ -65,6 +65,11 @@ button:hover {
 .partner-thumbnail {
   max-width: 330px;
   max-height: 150px;
+  transition: transform .2s;
+}
+
+.partner-thumbnail:hover {
+  transform: scale(1.05);
 }
 
 .partner-info {
@@ -96,6 +101,7 @@ button:hover {
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
+  border-radius: 10px;
 }
 
 .close {
@@ -111,3 +117,49 @@ button:hover {
       color: black;
       text-decoration: none;
   }
+
+/* Add Partner Form */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=url], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: rgb(91, 84, 218);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(91, 84, 218, 0.8);
+}
+
+input:focus {
+  outline: 1px solid rgb(91, 84, 218);
+}
+
+.form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
