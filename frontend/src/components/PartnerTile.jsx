@@ -9,13 +9,14 @@ function PartnerTile({ partnerData }) {
 
   return (
     <div className="partner-tile">
-      <img className="partner-thumbnail" src='' />
+      <img className="partner-thumbnail" src={partnerData.Logo} alt={`${partnerData.Name} Thumbnail`} />
       <hr />
-      <div className="partner-info">
-        This is some placeholder content - you'll need to replace the content here with actual partner information.
-      </div>
+      
+      <h2>{partnerData.Name}</h2>
 
-      <p>{partnerData.name}</p>
+      <div className="partner-info">
+        <p>{partnerData.Description}</p>
+      </div>
     </div>
   )
 }

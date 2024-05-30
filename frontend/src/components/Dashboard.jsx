@@ -10,7 +10,6 @@ function Dashboard() {
   const [partners, setPartners] = useState({});
 
   // Load all partners on initial page load 
-  // yooooo
   useEffect(() => {
     fetch('http://localhost:4000', {
       method: 'GET',
@@ -23,8 +22,6 @@ function Dashboard() {
   return (
     <div id="main-content">
       <div id="main-partners-grid">
-        <PartnerTile partnerData={{}} />
-
         {Object.keys(partners).map((key) => (
           <PartnerTile key={key} partnerData={partners[key]} />
         ))}
