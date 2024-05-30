@@ -17,6 +17,20 @@ function PartnerTile({ partnerData }) {
       <div className="partner-info">
         <p>{partnerData.Description}</p>
       </div>
+
+      <div className="tile-top-right">
+        {partnerData.IsActive == 1 && ( 
+          <div className="checkbox-container">
+            <label title="Active"><i className="fa-solid fa-circle-check" style={{ color: 'green' }}></i></label>
+          </div>
+        )}
+        {partnerData.IsActive == 0 && ( 
+          <div className="checkbox-container">
+            <label title="Inactive"><i className="fa-solid fa-circle-xmark" style={{ color: 'red' }}></i></label>
+          </div>
+        )}        
+      </div>
+
     </div>
   )
 }
