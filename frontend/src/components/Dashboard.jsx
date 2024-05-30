@@ -6,7 +6,6 @@ import PartnerTile from './PartnerTile';
   including information on each partner
 */
 function Dashboard() {
-
   const [partners, setPartners] = useState({});
 
   // Load all partners on initial page load 
