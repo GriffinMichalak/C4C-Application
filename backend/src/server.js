@@ -14,9 +14,7 @@ const partners = {}
   (but you are welcome to, if you'd like)
 */
 
-// Parse request bodies as JSON
 app.use(express.json())
-// Enable CORS for the frontend so it can call the backend
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -30,7 +28,6 @@ app.use((req, res, next) => {
 
 // Route to fetch partners data
 app.get('/', (req, res) => {
-  // Read partners data from the file
   fs.readFile('./backend/src/partners.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);

@@ -19,6 +19,27 @@ const buttonClick = () => {
 };
 
 function AddPartnerPopup() {
+    const [formData, setFormData] = useState({
+        name: '',
+        url: '',
+        logo: '',
+        description: '',
+        isactive: false
+    });
+
+    const handleChange = (event) => {
+        const { name, value, type, checked } = event.target;
+        setFormData({
+            ...formData,
+            [name]: type === 'checkbox' ? checked : value
+        });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(formData);
+    };
+
     return (
         <div id="add-partner-popup" className="modal">
             <div className="modal-content">
@@ -26,23 +47,23 @@ function AddPartnerPopup() {
                 <h2>Add a Partner</h2>
 
                 <div id="form-container">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label htmlFor="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Lucy's Love Bus" required/>
+                        <input type="text" id="name" name="name" placeholder="Lucy's Love Bus" required onChange={handleChange} />
 
                         <label htmlFor="url">URL</label>
-                        <input type="url" id="url" name="url" placeholder="https://lucyslovebus.org/" required/>
+                        <input type="url" id="url" name="url" placeholder="https://lucyslovebus.org/" required onChange={handleChange} />
 
                         <label>Logo (URL)</label>
-                        <input type="url" id="logo" name="logo" placeholder="https://c4cneu-public/LLB_2019_rgb.png" required/>
+                        <input type="url" id="logo" name="logo" placeholder="https://c4cneu-public/LLB_2019_rgb.png" required onChange={handleChange} />
 
                         <label>Description</label>
-                        <input type="text" id="description" name="description" placeholder="Lucy's Love Bus is pretty cool!" required/>
+                        <input type="text" id="description" name="description" placeholder="Lucy's Love Bus is pretty cool!" required onChange={handleChange} />
 
                         <label>Active?</label>
-                        <input type="checkbox" id="isactive" name="isactive" placeholder="Lucy's Love Bus" required/>
+                        <input type="checkbox" id="isactive" name="isactive" onChange={handleChange} />
                     
-                        <input type="submit" value="Submit"></input>
+                        <input type="submit" value="Submit" />
                     </form>
                 </div>
             </div>

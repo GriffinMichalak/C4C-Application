@@ -9,15 +9,6 @@ function PartnerTile({ partnerData }) {
 
   return (
     <div className="partner-tile">
-      <a href={partnerData.URL} target="_blank"><img className="partner-thumbnail" src={partnerData.Logo} alt={`${partnerData.Name} Thumbnail`} /></a>
-      <hr />
-      
-      <h2>{partnerData.Name}</h2>
-
-      <div className="partner-info">
-        <p>{partnerData.Description}</p>
-      </div>
-
       <div className="tile-top-right">
         {partnerData.IsActive == 1 && ( 
           <div className="checkbox-container">
@@ -29,6 +20,18 @@ function PartnerTile({ partnerData }) {
             <label title="Inactive"><i className="fa-solid fa-circle-xmark" style={{ color: 'red' }}></i></label>
           </div>
         )}        
+      </div>
+
+      <a href={partnerData.URL} target="_blank"><img className="partner-thumbnail" src={partnerData.Logo} alt={`${partnerData.Name} Thumbnail`} /></a>
+      
+      <h2>{partnerData.Name}</h2>
+
+      <div className="partner-info">
+        <p>{partnerData.Description}</p>
+      </div>
+
+      <div className="tile-bottom-right">
+        <a title="Edit"><i class="fa-solid fa-pen-to-square"></i></a>    
       </div>
 
     </div>
