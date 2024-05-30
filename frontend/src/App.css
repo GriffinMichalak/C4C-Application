@@ -50,6 +50,26 @@ button:hover {
   background-color: rgba(91, 84, 218, 0.8);
 }
 
+/* Searchbar */
+
+.search-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  left: 20px;
+}
+
+#searchbar form {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px !important;
+}
+
+#search {
+  padding: 12px 26px;
+}
+
+
 /* PartnerTile and Tab */
 
 .partner-tile {
