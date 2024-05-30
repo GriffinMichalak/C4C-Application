@@ -2,6 +2,8 @@ import './App.css'
 import Dashboard from './components/Dashboard'
 import AddButton from './components/AddButton'
 import AddPartnerPopup from './components/AddPartnerPopup'
+import ActiveDropdown from './components/ActiveDropdown'
+import SearchBar from './components/Searchbar'
 
 function App() {
 
@@ -11,7 +13,12 @@ function App() {
         Code4Community: Projects
       </h1>
 
-      <AddButton />
+      <div className="header-controls">
+        <ActiveDropdown />
+        <AddButton />
+        <SearchBar />
+      </div>
+      
       <AddPartnerPopup />
       <Dashboard />
     </>

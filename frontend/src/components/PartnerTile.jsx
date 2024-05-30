@@ -31,7 +31,7 @@ function PartnerTile({ partnerData }) {
       </div>
 
       <div className="tile-bottom-right">
-        <a title="Edit"><i class="fa-solid fa-pen-to-square"></i></a>    
+        <a title="Edit"><i className="fa-solid fa-pen-to-square"></i></a>    
       </div>
 
     </div>
