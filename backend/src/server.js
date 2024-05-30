@@ -9,7 +9,7 @@ const partners = {
     "Name": "Lucy's Love Bus",
     "URL": "https://lucyslovebus.org/",
     "Logo": "https://c4cneu-public.s3.us-east-2.amazonaws.com/Site/LLB_2019_rgb.png",
-    "Description": "Lucy’s Love Bus improves quality of life for children with cancer or other life-threatening illnesses with integrative therapies like massage, meditation, acupuncture, music therapy, and therapeutic horseback riding. Integrative therapies ease children’s pain and anxiety during and after traditional medical treatments.",
+    "Description": "Lucy's Love Bus improves quality of life for children with cancer or other life-threatening illnesses with integrative therapies like massage, meditation, acupuncture, music therapy, and therapeutic horseback riding. Integrative therapies ease children’s pain and anxiety during and after traditional medical treatments.",
     "IsActive": 1
   },
 
@@ -25,7 +25,7 @@ const partners = {
     "Name": "Hands Across the Sea",
     "URL": "https://www.handsacrossthesea.net/",
     "Logo": "https://c4cneu-public.s3.us-east-2.amazonaws.com/Site/HandsLogo.jpg",
-    "Description": "Hands Across the Sea is a non-profit organization founded in 2007 to advance childhood literacy in the Eastern Caribbean. The organization rejuvenates and stocks school libraries with new books, and its Caribbean Literacy and School Support (CLASS) program helps sustain student reading gains by empowering teachers and students to operate high-functioning lending libraries. Over the years, Hands Across the Sea has placed more than half a million new books in 883 schools and 55 community libraries. The organization is recognized as the leading literacy non-governmental organization in the Islands, and is a member of the Organization of Eastern Caribbean States (OECS) Regional Education Group and a Development Partnership to the OECS Education Management Unit (EDMU), allowing it to work in partnership with regional education organizations.",
+    "Description": "Hands Across the Sea is a non-profit organization founded in 2007 to advance childhood literacy in the Eastern Caribbean. The organization rejuvenates and stocks school libraries with new books, and its Caribbean Literacy and School Support (CLASS) program helps sustain student reading gains by empowering teachers and students to operate high-functioning lending libraries.",
     "IsActive": 1
   },
 

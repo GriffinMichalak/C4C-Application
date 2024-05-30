@@ -9,7 +9,7 @@ function PartnerTile({ partnerData }) {
 
   return (
     <div className="partner-tile">
-      <img className="partner-thumbnail" src={partnerData.Logo} alt={`${partnerData.Name} Thumbnail`} />
+      <a href={partnerData.URL} target="_blank"><img className="partner-thumbnail" src={partnerData.Logo} alt={`${partnerData.Name} Thumbnail`} /></a>
       <hr />
       
       <h2>{partnerData.Name}</h2>
