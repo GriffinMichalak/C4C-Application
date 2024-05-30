@@ -14,6 +14,8 @@ function PartnerTile({ partnerData }) {
       <div className="partner-info">
         This is some placeholder content - you'll need to replace the content here with actual partner information.
       </div>
+
+      <p>{partnerData.name}</p>
     </div>
   )
 }

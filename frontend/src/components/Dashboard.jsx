@@ -15,12 +15,18 @@ function Dashboard() {
       method: 'GET',
     })
     .then((res) => res.json())
+    .then((data) => setPartners(data))
+    .catch((err) => console.error('Error fetching partners:', err));
   }, [])
 
   return (
     <div id="main-content">
       <div id="main-partners-grid">
         <PartnerTile partnerData={{}} />
+        
+        {Object.keys(partners).map((key) => (
+          <PartnerTile key={key} partnerData={partners[key]} />
+        ))}
       </div>
     </div>
   )
