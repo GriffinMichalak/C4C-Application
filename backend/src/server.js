@@ -70,6 +70,68 @@ app.post('/add-partner', (req, res) => {
   });
 });
 
+// EDIT PARTNER
+app.put('/edit-partner/:id', (req, res) => {
+  const partnerId = req.params.id;
+  const updatedPartner = req.body;
+
+  fs.readFile('./backend/src/partners.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error reading partners data');
+    }
+
+    const partners = JSON.parse(data);
+
+    if (partners[partnerId]) {
+      partners[partnerId] = {
+        ...partners[partnerId],
+        ...updatedPartner
+      };
+
+      fs.writeFile('./backend/src/partners.json', JSON.stringify(partners, null, 2), (err) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).send('Error writing partners data');
+        }
+
+        res.status(200).send('Partner updated successfully');
+      });
+    } else {
+      res.status(404).send('Partner not found');
+    }
+  });
+});
+
+// DELETE PARTNER
+app.delete('/delete-partner/:id', (req, res) => {
+  const partnerId = req.params.id;
+
+  fs.readFile('./backend/src/partners.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error reading partners data');
+    }
+
+    const partners = JSON.parse(data);
+
+    if (partners[partnerId]) {
+      delete partners[partnerId];
+
+      fs.writeFile('./backend/src/partners.json', JSON.stringify(partners, null, 2), (err) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).send('Error writing partners data');
+        }
+
+        res.status(200).send('Partner deleted successfully');
+      });
+    } else {
+      res.status(404).send('Partner not found');
+    }
+  });
+});
+
 // Start the backend
 app.listen(port, () => {
   console.log(`Express server starting on port ${port}!`);
