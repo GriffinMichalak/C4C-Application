@@ -39,7 +39,38 @@ app.get('/', (req, res) => {
   });
 });
 
+// ADD NEW PARTNER
+app.post('/add-partner', (req, res) => {
+  const newPartner = req.body;
+
+  fs.readFile('./backend/src/partners.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error reading partners data');
+    }
+
+    const partners = JSON.parse(data);
+
+    partners[newPartner.Id] = {
+      "Name": newPartner.Name,
+      "URL": newPartner.URL,
+      "Logo": newPartner.Logo,
+      "Description": newPartner.Description,
+      "IsActive": newPartner.IsActive
+    };
+
+    fs.writeFile('./backend/src/partners.json', JSON.stringify(partners, null, 2), (err) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).send('Error writing partners data');
+      }
+
+      res.status(200).send('Partner added successfully');
+    });
+  });
+});
+
 // Start the backend
 app.listen(port, () => {
   console.log(`Express server starting on port ${port}!`);
-})
+});

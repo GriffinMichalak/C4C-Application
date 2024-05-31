@@ -20,6 +20,7 @@ const buttonClick = () => {
 
 function AddPartnerPopup() {
     const [formData, setFormData] = useState({
+        id: '',
         name: '',
         url: '',
         logo: '',
@@ -37,7 +38,32 @@ function AddPartnerPopup() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
+
+        // Construct the partner object
+        const newPartner = {
+            Id: formData.id,
+            Name: formData.name,
+            URL: formData.url,
+            Logo: formData.logo,
+            Description: formData.description,
+            IsActive: formData.isactive ? 1 : 0
+        };
+
+        // Send the POST request to the server
+        fetch('http://localhost:4000/add-partner', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newPartner)
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            location.reload();
+            buttonClick();
+        })
+        .catch(error => console.error('Error:', error));
     };
 
     return (
@@ -48,19 +74,22 @@ function AddPartnerPopup() {
 
                 <div id="form-container">
                     <form onSubmit={handleSubmit}>
+                        <label htmlFor="id">ID</label>
+                        <input type="text" id="id" name="id" placeholder="LLB" required onChange={handleChange} />
+
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Lucy's Love Bus" required onChange={handleChange} />
 
                         <label htmlFor="url">URL</label>
                         <input type="url" id="url" name="url" placeholder="https://lucyslovebus.org/" required onChange={handleChange} />
 
-                        <label>Logo (URL)</label>
+                        <label htmlFor="logo">Logo (URL)</label>
                         <input type="url" id="logo" name="logo" placeholder="https://c4cneu-public/LLB_2019_rgb.png" required onChange={handleChange} />
 
-                        <label>Description</label>
+                        <label htmlFor="description">Description</label>
                         <input type="text" id="description" name="description" placeholder="Lucy's Love Bus is pretty cool!" required onChange={handleChange} />
 
-                        <label>Active?</label>
+                        <label htmlFor="isactive">Active?</label>
                         <input type="checkbox" id="isactive" name="isactive" onChange={handleChange} />
                     
                         <input type="submit" value="Submit" />
@@ -68,7 +97,7 @@ function AddPartnerPopup() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default AddPartnerPopup;
