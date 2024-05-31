@@ -5,23 +5,47 @@ import React from 'react';
   along with any tools to manage said information
 */
 
-function PartnerTile({ partnerData, onDelete }) {
+function PartnerTile({ id, partnerData }) {
+
+  const handleDelete = () => {
+    const confirmDelete = window.confirm("Delete this partner?");
+    
+    if (confirmDelete) {
+      fetch(`http://localhost:4000/delete-partner/${id}`, {
+        method: 'DELETE',
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to delete partner');
+        }
+        console.log("Partner deleted successfully");
+        location.reload();
+      })
+      .catch(error => {
+        console.error('Error deleting partner:', error);
+      });
+    }
+  };
+  
 
   const editButtonClick = () => {
     let popup = document.getElementById("edit-partner-popup");
     if (popup.style.display === "none" || popup.style.display === "") {
       popup.style.display = "block";
 
+      console.log(id);
+
       document.getElementById('edit-name').value = partnerData.Name;
       document.getElementById('edit-url').value = partnerData.URL;
       document.getElementById('edit-logo').value = partnerData.Logo;
       document.getElementById('edit-description').value = partnerData.Description;
       document.getElementById('edit-isactive').checked = (partnerData.IsActive === 1);
-    } else {
+    } 
+    else {
       popup.style.display = "none";
     }
 
-    console.log(partnerData.Name);
+    //console.log(partnerData.Name);
   };
 
 
@@ -53,7 +77,7 @@ function PartnerTile({ partnerData, onDelete }) {
 
           <div id="delete-button" style={{ textAlign: 'center', display: 'flex' }}>
             <input className='save-edit-button' type="submit" value="Save" />
-            <button className='delete-button'><i className="fa-solid fa-trash-can"></i></button>
+            <button className='delete-button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
           </div>
         </div>
       </div>

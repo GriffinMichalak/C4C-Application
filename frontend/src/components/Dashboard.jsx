@@ -86,7 +86,7 @@ function Dashboard() {
           <p>🤔 No results found for '{searchQuery}'.</p>
         ) : (
           visiblePartners.map((key) => (
-            <PartnerTile key={key} partnerData={partners[key]} />
+            <PartnerTile key={key} id={key} partnerData={partners[key]} />
           ))
         )}
       </div>
