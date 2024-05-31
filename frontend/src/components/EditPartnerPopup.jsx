@@ -17,6 +17,11 @@ function EditPartnerPopup() {
             <div className="modal-content">
                 <span className="close" onClick={buttonClick}> &times; </span>
                 <h2>Edit Partner</h2>
+
+                <div id="delete-button" style={{ textAlign: 'center', display: 'flex'}}>
+                    <input className='save-edit-button' type="submit" value="Save" />
+                    <button className='delete-button'><i className="fa-solid fa-trash-can"></i></button>
+                </div>
             </div>
         </div>
     );

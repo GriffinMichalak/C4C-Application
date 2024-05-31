@@ -83,12 +83,18 @@ button:hover {
   justify-content: center;
   align-items: center;
 
-  border: 1px solid #3d3d3d;
+  border: 1px solid lightgray;
   border-radius: 12px;
 
   padding: 25px;
 
   overflow-y: auto;
+
+  transition: ease 0.3s;
+}
+
+.partner-tile:hover {
+  border: 1px solid rgb(91, 84, 218);
 }
 
 .partner-thumbnail {
@@ -228,6 +234,17 @@ input:focus {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+.delete-button {
+  color: red;
+  background-color: white;
+  padding: 15px !important;
+}
+
+.delete-button:hover {
+  color: rgb(91, 84, 218);
+  background-color: white;
 }
 
 select {
