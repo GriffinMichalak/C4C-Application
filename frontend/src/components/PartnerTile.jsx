@@ -7,6 +7,19 @@ import React from 'react';
 
 function PartnerTile({ partnerData }) {
 
+
+  const editButtonClick = () => {
+    let popup = document.getElementById("edit-partner-popup");
+    if (popup.style.display == "none" || popup.style.display == "") {
+        popup.style.display = "block";
+    }
+    else {
+        popup.style.display = "none";
+    }
+
+    console.log(partnerData.Name);
+};
+
   return (
     <div className="partner-tile">
       <div className="tile-top-right">
@@ -31,7 +44,7 @@ function PartnerTile({ partnerData }) {
       </div>
 
       <div className="tile-bottom-right">
-        <a title="Edit"><i className="fa-solid fa-pen-to-square"></i></a>    
+        <a onClick={editButtonClick} title="Edit"><i className="fa-solid fa-pen-to-square"></i></a>    
       </div>
 
     </div>
