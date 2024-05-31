@@ -239,3 +239,13 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+/* Footer */
+
+#footer {
+  text-align: center;
+}
+
+h5 {
+  font-weight: 400;
+}

@@ -4,6 +4,7 @@ import AddButton from './components/AddButton'
 import AddPartnerPopup from './components/AddPartnerPopup'
 import ActiveDropdown from './components/ActiveDropdown'
 import SearchBar from './components/Searchbar'
+import Footer from './components/Footer'
 import EditPartnerPopup from './components/EditPartnerPopup'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <AddPartnerPopup />
       <EditPartnerPopup />
       <Dashboard />
+      <Footer />
     </>
   )
 }
