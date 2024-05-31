@@ -23,7 +23,9 @@ function App() {
       
       <AddPartnerPopup />
       <EditPartnerPopup />
+
       <Dashboard />
+
       <Footer />
     </>
   )
