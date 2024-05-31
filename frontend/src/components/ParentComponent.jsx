@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PartnerTile from './PartnerTile';
-import EditPartnerPopup from './EditPartnerPopup';
 
 function ParentComponent({ partnerDataList }) {
     const [partnerName, setPartnerName] = useState("");

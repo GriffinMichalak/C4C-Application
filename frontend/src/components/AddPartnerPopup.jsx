@@ -87,7 +87,7 @@ function AddPartnerPopup() {
                         <input type="url" id="logo" name="logo" placeholder="https://c4cneu-public/LLB_2019_rgb.png" required onChange={handleChange} />
 
                         <label htmlFor="description">Description</label>
-                        <input type="text" id="description" name="description" placeholder="Lucy's Love Bus is pretty cool!" required onChange={handleChange} />
+                        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
 
                         <label htmlFor="isactive">Active?</label>
                         <input type="checkbox" id="isactive" name="isactive" onChange={handleChange} />

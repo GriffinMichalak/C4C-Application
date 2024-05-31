@@ -226,6 +226,18 @@ input[type=submit]:hover {
   background-color: rgba(91, 84, 218, 0.8);
 }
 
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  resize: none;
+}
+
 input:focus {
   outline: 1px solid rgb(91, 84, 218);
 }
@@ -256,6 +268,7 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 
 /* Footer */
 
