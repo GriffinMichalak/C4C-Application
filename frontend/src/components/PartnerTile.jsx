@@ -27,7 +27,6 @@ function PartnerTile({ id, partnerData }) {
     }
   };
   
-
   const editButtonClick = () => {
     let popup = document.getElementById("edit-partner-popup");
     if (popup.style.display === "none" || popup.style.display === "") {
