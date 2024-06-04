@@ -1,23 +1,11 @@
-import React, { useState } from 'react';
-
-// Close popup if clicked off of
-window.addEventListener('click', function (event) {
-  let popup = document.getElementById("edit-partner-popup");
-  if (event.target == popup) {
-      popup.style.display = "none";
-  }
-});
+import React from 'react';
 
 /*
   A block for a single partner, containing information for them
   along with any tools to manage said information
 */
-function PartnerTile({ id, partnerData }) {
 
-  const handleSave = () => {
-    // Save the partner data to the database
-    console.log("Save!");
-  }
+function PartnerTile({ id, partnerData }) {
 
   const handleDelete = () => {
     const confirmDelete = window.confirm("Delete this partner?");
@@ -40,55 +28,52 @@ function PartnerTile({ id, partnerData }) {
   };
   
   const editButtonClick = () => {
-    let popup = document.getElementById("edit-partner-popup");
+    let popup = document.getElementById(`edit-partner-popup-${id}`);
     if (popup.style.display === "none" || popup.style.display === "") {
       popup.style.display = "block";
 
       console.log(id);
 
-      document.getElementById('edit-name').value = partnerData.Name;
-      document.getElementById('edit-url').value = partnerData.URL;
-      document.getElementById('edit-logo').value = partnerData.Logo;
-      document.getElementById('edit-description').value = partnerData.Description;
-      document.getElementById('edit-isactive').checked = (partnerData.IsActive === 1);
+      document.getElementById(`edit-name-${id}`).value = partnerData.Name;
+      document.getElementById(`edit-url-${id}`).value = partnerData.URL;
+      document.getElementById(`edit-logo-${id}`).value = partnerData.Logo;
+      document.getElementById(`edit-description-${id}`).value = partnerData.Description;
+      document.getElementById(`edit-isactive-${id}`).checked = (partnerData.IsActive === 1);
     } 
     else {
       popup.style.display = "none";
     }
-
-    //console.log(partnerData.Name);
   };
-
 
   return (
     <div>
       {/* ========= POPUP ========= */}
-      <div id="edit-partner-popup" className="modal">
+      <div id={`edit-partner-popup-${id}`} className="modal">
         <div className="modal-content">
           <span className="close" onClick={editButtonClick}> &times; </span>
           <h2>Edit Partner</h2>
           <div id="form-container">
             <form>
-              <label htmlFor="edit-name">Name</label>
-              <input type="text" id="edit-name" name="edit-name" required />
+              <label htmlFor={`edit-name-${id}`}>Name</label>
+              <input type="text" id={`edit-name-${id}`} name="edit-name" required />
 
-              <label htmlFor="edit-url">URL</label>
-              <input type="url" id="edit-url" name="edit-url" required />
+              <label htmlFor={`edit-url-${id}`}>URL</label>
+              <input type="url" id={`edit-url-${id}`} name="edit-url" required />
 
-              <label htmlFor="edit-logo">Logo</label>
-              <input type="url" id="edit-logo" name="edit-logo" required />
+              <label htmlFor={`edit-logo-${id}`}>Logo</label>
+              <input type="url" id={`edit-logo-${id}`} name="edit-logo" required />
 
-              <label htmlFor="edit-description">Description</label>
-              <textarea id="edit-description" name="edit-description" rows="4" cols="50" required></textarea>
+              <label htmlFor={`edit-description-${id}`}>Description</label>
+              <textarea id={`edit-description-${id}`} name="edit-description" rows="4" cols="50" required></textarea>
 
-              <label htmlFor="edit-isactive">Active?</label>
-              <input type="checkbox" id="edit-isactive" name="edit-isactive" />
-
-              <div id="delete-button" style={{ textAlign: 'center', display: 'flex' }}>
-                <input className='save-edit-button' onClick={handleSave} type="submit" value="Save" />
-                <button className='delete-button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
-              </div>
+              <label htmlFor={`edit-isactive-${id}`}>Active?</label>
+              <input type="checkbox" id={`edit-isactive-${id}`} name="edit-isactive" />
             </form>
+          </div>
+
+          <div id="delete-button" style={{ textAlign: 'center', display: 'flex' }}>
+            <input className='save-edit-button' type="submit" value="Save" />
+            <button className='delete-button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
           </div>
         </div>
       </div>
