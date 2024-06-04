@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 
+// Close popup if clicked off of
+window.addEventListener('click', function (event) {
+  let popup = document.getElementById("edit-partner-popup");
+  if (event.target == popup) {
+      popup.style.display = "none";
+  }
+});
+
 /*
   A block for a single partner, containing information for them
   along with any tools to manage said information
 */
-
 function PartnerTile({ id, partnerData }) {
 
   const handleSave = () => {

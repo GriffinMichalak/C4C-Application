@@ -1,7 +1,26 @@
 # Code4Community Partners Dashboard
 
-- A high-level overview of the application
+This web app provides an easy-to-use dashboard UI that displays the partners that Code4Community is working with, or has worked with in the past. 
+
+## Features
+- Displays a list of partner organizations with their names, logos, descriptions (including how we support them), and if they're active or not
+- Allows users to add and store partner data for new partners, a single central place
+- Storage of all data long-term by writing to a file
+- Allows users to filter partners by status (actively working with, not working with, all) via a dropdown
+- Allows users to search for specific partners by name
+- Allows users to search/filter partners based on search query
+- Add a new partner
+- Delete an existing partner
+- Edit an existing partner (coming soon)
+- Form validation for data type accuracy
+- Responsive design for resizing
+- Intuitive popup design where clicking off of popup closes it (not just the X)
+- Login page to only enable Northeastern students to access the website
+
+## Design Decisions
 - An explanation of any design decisions that you made
+
+## Reflection
 - A short reflection of your work - some questions you may want to (but are not required
 to) answer are:
 - Did you learn anything from this project? If so, how might you have done this
