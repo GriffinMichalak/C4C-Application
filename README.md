@@ -1,13 +1,15 @@
-● A high-level overview of the application
-● An explanation of any design decisions that you made
-● A short reflection of your work - some questions you may want to (but are not required
+# Code4Community Partners Dashboard
+
+- A high-level overview of the application
+- An explanation of any design decisions that you made
+- A short reflection of your work - some questions you may want to (but are not required
 to) answer are:
-○ Did you learn anything from this project? If so, how might you have done this
+- Did you learn anything from this project? If so, how might you have done this
 differently knowing what you know now?
-○ What would you have done differently if you had more time?
-○ Did you run into issues during this project? If so, how did solve or work around
+- What would you have done differently if you had more time?
+- Did you run into issues during this project? If so, how did solve or work around
 them?
-○ If you implemented any bonus features, what made you choose them?
+- If you implemented any bonus features, what made you choose them?
 
 ## Prerequisites
 
