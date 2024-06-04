@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 /*
   A block for a single partner, containing information for them
@@ -6,6 +6,11 @@ import React from 'react';
 */
 
 function PartnerTile({ id, partnerData }) {
+
+  const handleSave = () => {
+    // Save the partner data to the database
+    console.log("Save!");
+  }
 
   const handleDelete = () => {
     const confirmDelete = window.confirm("Delete this partner?");
@@ -71,12 +76,12 @@ function PartnerTile({ id, partnerData }) {
 
               <label htmlFor="edit-isactive">Active?</label>
               <input type="checkbox" id="edit-isactive" name="edit-isactive" />
-            </form>
-          </div>
 
-          <div id="delete-button" style={{ textAlign: 'center', display: 'flex' }}>
-            <input className='save-edit-button' type="submit" value="Save" />
-            <button className='delete-button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
+              <div id="delete-button" style={{ textAlign: 'center', display: 'flex' }}>
+                <input className='save-edit-button' onClick={handleSave} type="submit" value="Save" />
+                <button className='delete-button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -1,5 +1,13 @@
-This is the starter code for Code4Community's technical challenge for Fall 2024. 
-For more detailed information about each of the parts of this starter code, check out the [`INFO.md`](INFO.md) file
+● A high-level overview of the application
+● An explanation of any design decisions that you made
+● A short reflection of your work - some questions you may want to (but are not required
+to) answer are:
+○ Did you learn anything from this project? If so, how might you have done this
+differently knowing what you know now?
+○ What would you have done differently if you had more time?
+○ Did you run into issues during this project? If so, how did solve or work around
+them?
+○ If you implemented any bonus features, what made you choose them?
 
 ## Prerequisites
 
@@ -13,10 +21,14 @@ If you don't have them already, you'll need to install Node.js/NPM and Git:
 
 1. Clone this repo on to your computer. You can do so with the [desktop app](https://desktop.github.com/), or in a terminal with the following:
 ```
-git clone https://github.com/huang0h/c4c-challenge-sample.git
+git clone https://github.com/GriffinMichalak/C4C-Application.git
 ```
 2. In a terminal, run `npm install` **at the root of this project** to install the required packages
 3. Run `npm run dev` **at the root of this project** to start the app locally
 4. Visit `http://localhost:3000` to view the website
-    
-    4a. The backend will be available at `http://localhost:4000`
+
+    a. The backend will be available at `http://localhost:4000`
+
+5. Error handling
+
+    a. If the app crashes, try running `pkill -f node` and then `npm run dev` again. 
