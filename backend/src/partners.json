@@ -10,7 +10,7 @@
     "Name": "Speak For The Trees",
     "URL": "https://treeboston.org/",
     "Logo": "https://c4cneu-public.s3.us-east-2.amazonaws.com/Site/speakforthetrees_logo_original_RGB.jpg",
-    "Description": "Speak for the Trees Boston aims to improve the size and health of the urban forest in the greater Boston area, with a focus on under-served and under-canopied neighborhoods. They work with volunteers to inventory (collect data) trees, plant trees, and educate those about trees. C4C has built a tree stewardship application for SFTT that allows users to participate in conserving Boston's urban forest. Across Boston, hundreds of trees have been adopted and cared for.",
+    "Description": "Speak for the Trees Boston aims to improve the size and health of the urban forest in the greater Boston area. They work with volunteers to inventory (collect data) trees, plant trees, and educate those about trees. C4C has built a tree stewardship application for SFTT that allows users to participate in conserving Boston's urban forest. Across Boston, hundreds of trees have been adopted and cared for.",
     "IsActive": 1
   },
   "HATS": {
@@ -18,7 +18,7 @@
     "URL": "https://www.handsacrossthesea.net/",
     "Logo": "https://c4cneu-public.s3.us-east-2.amazonaws.com/Site/HandsLogo.jpg",
     "Description": "Hands Across the Sea is a non-profit organization founded in 2007 to advance childhood literacy in the Eastern Caribbean. The organization rejuvenates and stocks school libraries with new books, and its Caribbean Literacy and School Support (CLASS) program helps sustain student reading gains by empowering teachers and students to operate high-functioning lending libraries.",
-    "IsActive": 1
+    "IsActive": false
   },
   "JPAL": {
     "Name": "J-PAL",
@@ -55,25 +55,11 @@
     "Description": "Breaktime's mission is to break the cycle of homelessness by equipping young adults with the job and financial security they need to establish housing security. A key part of the program is by providing meaningful employment. We are assisting Breaktime in building a bespoke system for their unique needs.",
     "IsActive": 1
   },
-  "NEW_PARTNER_ID": {
-    "Name": "New Partner Name",
-    "URL": "https://newpartner.org/",
-    "Logo": "https://newpartner.org/logo.png",
-    "Description": "New partner description here.",
-    "IsActive": 1
-  },
-  "asdf": {
-    "Name": "asdf",
-    "URL": "https://lucyslovebus.org/",
-    "Logo": "http://localhost:3000",
-    "Description": "",
-    "IsActive": 1
-  },
   "new": {
     "Name": "new",
     "URL": "https://lucyslovebus.org/",
     "Logo": "http://localhost:3000",
-    "Description": "",
+    "Description": "asdfads",
     "IsActive": 0
   }
 }

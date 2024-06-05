@@ -15,7 +15,9 @@ This web app provides an easy-to-use dashboard UI that displays the partners tha
 - Form validation for data type accuracy
 - Responsive design for resizing
 - Intuitive popup design where clicking off of popup closes it (not just the X)
+- If two projects with the same ID are created, one is overwritten
 - Login page to only enable Northeastern students to access the website
+
 
 ## Design Decisions
 - An explanation of any design decisions that you made

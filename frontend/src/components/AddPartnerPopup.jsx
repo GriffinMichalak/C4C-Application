@@ -49,6 +49,8 @@ function AddPartnerPopup() {
             IsActive: formData.isactive ? 1 : 0
         };
 
+        console.log(newPartner);
+
         // Send the POST request to the server
         fetch('http://localhost:4000/add-partner', {
             method: 'POST',
@@ -87,7 +89,7 @@ function AddPartnerPopup() {
                         <input type="url" id="logo" name="logo" placeholder="https://c4cneu-public/LLB_2019_rgb.png" required onChange={handleChange} />
 
                         <label htmlFor="description">Description</label>
-                        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+                        <textarea id="description" name="description" rows="4" cols="50" maxLength="350" required onChange={handleChange}></textarea>
 
                         <label htmlFor="isactive">Active?</label>
                         <input type="checkbox" id="isactive" name="isactive" onChange={handleChange} />
