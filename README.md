@@ -53,6 +53,5 @@ git clone https://github.com/GriffinMichalak/C4C-Application.git
     a. The backend will be available at `http://localhost:4000`
 
 5. Error handling
-
-    a. If the app crashes, try running `pkill -f node` and then `npm run dev` again.
-    b. If the data fails to load open a terminal in VSCode (ctrl + '~') and open Ports, and add 4000
+- If the app crashes, try running `pkill -f node` and then `npm run dev` again.
+- If the data fails to load open a terminal in VSCode (ctrl + '~') and open Ports, and add 4000
