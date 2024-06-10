@@ -21,12 +21,11 @@ This web app provides an easy-to-use dashboard UI that displays the partners tha
 
 ## Design Decisions
 - I tried to break up as many UI pieces as possible into their own componenets for readability, usability, and code organization.
+- I made my data accessible from a file so that it was easy to access it and the data would remain the same even after the program stopped running.
 - I added as many comments as possible into my code to make it clear where parts of the program start and finished.
 
 ## Reflection
-- Did you learn anything from this project? If so, how might you have done this
-differently knowing what you know now?
-- While working on this project, I learned a lot about creating UIs in React and accessing data from a stored location using the Express JS framework. 
+- While working on this project, I learned a lot about creating UIs in React and accessing data from a stored location using the Express JS framework. Now knowing this, I would have drawn out on paper what features I should include and how to incorporate them into coponents easier. This would have made it easier for me to break every feature into a component instead of lumping some features together. 
 - If I had more time, I would have spent more time working on the Edit Partner section of the application. I got very close to finishing it successfully, but wasn't able to fully crack it. 
 - One issue I ran into while working on this project was finding how to pass the data in a PartnerTile to a popup with that corresponding project information. I had to do some research online and on stack overflow (lol) in order to learn from mroe experienced developers so that I could learn how to make my application functional. 
 - The bonus features that I implemented included a search bar for partners, the ability to filter by project activity, and many others described in the Features section above. I chose to add them because they would add more detail and value to the application, allowing for more ease of use and access. For example, adding authentication (sort of) via a Northeastern email is the first step to begin to ensure that only NU students are accessing the data correctly. Furthermore, adding the ability to click off of a popup makes the design of my application more intuitive.
