@@ -58,3 +58,4 @@ git clone https://github.com/GriffinMichalak/C4C-Application.git
 6. Error handling
 - If the app crashes, try running `pkill -f node` and then `npm run dev` again.
 - If the data fails to load open a terminal in VSCode (ctrl + '~') and open Ports, and add 4000
+- If it says "no results for '' " then reload the page, and the updated data should load. This is an error I wasn't able to figure out in time.
