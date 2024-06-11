@@ -28,6 +28,7 @@ function PartnerTile({ id, partnerData }) {
         }
         console.log("Partner deleted successfully");
         location.replace(location.href);
+        editButtonClick();
       })
       .catch(error => {
         console.error('Error deleting partner:', error);
