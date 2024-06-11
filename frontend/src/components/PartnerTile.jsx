@@ -7,6 +7,14 @@ import React from 'react';
 
 function PartnerTile({ id, partnerData }) {
 
+  window.addEventListener('click', function (event) {
+    let elem = "edit-partner-popup-" + id; 
+    let popup = document.getElementById(elem);
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+  });
+
   const handleDelete = () => {
     const confirmDelete = window.confirm("Delete this partner?");
     
