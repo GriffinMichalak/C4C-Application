@@ -62,7 +62,7 @@ function AddPartnerPopup() {
         .then(response => response.text())
         .then(data => {
             console.log(data);
-            location.reload();
+            location.replace(location.href);
             buttonClick();
         })
         .catch(error => console.error('Error:', error));

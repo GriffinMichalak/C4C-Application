@@ -61,5 +61,12 @@
     "Logo": "https://newpartner.org/logo.png",
     "Description": "New partner description here.",
     "IsActive": 1
+  },
+  "sadf": {
+    "Name": "asdf",
+    "URL": "https://lucyslovebus.org/",
+    "Logo": "http://localhost:3000",
+    "Description": "asdf",
+    "IsActive": 0
   }
 }
