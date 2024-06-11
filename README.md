@@ -21,6 +21,8 @@ This web app provides an easy-to-use dashboard UI that displays the partners tha
 
 ## Design Decisions
 - I tried to break up as many UI pieces as possible into their own componenets for readability, usability, and code organization.
+- I decided to add a highlight around each of the partner tiles so that it gave a comfortable feel for the user when you hover over it.
+- I also made the logo jump up when you hover over a company logo, just like the C4C official website does. 
 - I made my data accessible from a file so that it was easy to access it and the data would remain the same even after the program stopped running.
 - I added as many comments as possible into my code to make it clear where parts of the program start and finished.
 
