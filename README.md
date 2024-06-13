@@ -51,7 +51,7 @@ git clone https://github.com/GriffinMichalak/C4C-Application.git
 4. Visit `http://localhost:3000` to view the website
 
     a. The backend will be available at `http://localhost:4000`
-5. TO LOGIN:
+5. TO LOGIN (if prompted):
 - Username: abc@northeastern.edu ("abc" can be anything)
 - Password: anything lol (not very secure but it's a proof of concept)
 
